@@ -1,6 +1,4 @@
 public class VendingMachine {
-    public static void main(String[] args) {
-
         public void recharger(ArrayList<Integer> stock ) {
             System.out.println("======== Recharger le stock ========");
             System.out.println("1. Soda");
@@ -51,5 +49,8 @@ public class VendingMachine {
             return compteur;
 
         }
+    
+       public static void main(String[] args) {
+           
     }
 }
