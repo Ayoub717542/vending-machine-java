@@ -27,10 +27,18 @@ public class Trader extends Person{
         }
     }
     public void Acheter_Actif( Asset A,double quantete){
+        double totalPrice=0.0;
         TradingPlatform t = new TradingPlatform();
-        for (Asset a : t.assets){
-
+        if (quantete>0){
+             totalPrice=A.getPrice()*quantete;
+        }else{
+            System.out.println("Insufficient balance");
+            return;
         }
+        if(this.Solde>=totalPrice){
+            this.Solde-=totalPrice;
+        }
+        this.portfolio.Ajouter_Asset_to_portoflio(A,quantete);
+        System.out.println("Actif acquis avec succès");
     }
-
 }

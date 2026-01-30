@@ -12,6 +12,7 @@ public class Main {
        Trader t = new Trader(1,"ayoub",29989.2,P);
        P.Ajouter_Asset_to_portoflio(A,33.4);
        trading.ajouter_Trader(t);
+       t.Acheter_Actif(A,3.3);
        t.Afficher_Portfolio();
        trading.Afficher_Trader();
     }
